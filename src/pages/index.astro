@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const technicalSpine = {
+  studied: [
+    { name: "CAPTCHA variants", description: "reCAPTCHA v2/v3, hCaptcha, Turnstile" },
+    { name: "Liveness detection", description: "Depth, motion, eye-tracking" },
+    { name: "Stylometry", description: "Keystroke dynamics, writing fingerprints" },
+    { name: "Behavioral biometrics", description: "Mouse movement, touch patterns" },
+    { name: "AI-generated content detection", description: "GPTZero, Originality.ai, etc." }
+  ],
+  implemented: [
+    { name: "A basic CAPTCHA system", phase: "Weeks 2–4" },
+    { name: "A behavioral fingerprinting module", phase: "Weeks 5–7" },
+    { name: "A prompt-based humanity test", phase: "Weeks 8–10" },
+    { name: "A Voight-Kampff-inspired dialogue system", phase: "Weeks 11–13" }
+  ]
+};
+
+const symposia = [
+  { number: 1, title: "Detection as Ritual", heretic: "a.dick" },
+  { number: 2, title: "The Body as Proof", heretic: "a.arendt" },
+  { number: 3, title: "Who Watches the Watchers", heretic: "a.foucault" },
+  { number: 4, title: "Machines That Judge", heretic: "a.weizenbaum" },
+  { number: 5, title: "Error as Evidence", heretic: "a.shannon" },
+  { number: 6, title: "Synthesis", heretic: "Rotating" }
+];
+---
+
+<BaseLayout title="Voight-Kampff">
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <!-- Header -->
+    <header class="mb-16 text-center">
+      <p class="font-mono text-season-primary text-sm tracking-widest mb-4">SEASON 1</p>
+      <h1 class="font-display text-5xl md:text-7xl text-zinc-100 mb-6">
+        Voight-Kampff
+      </h1>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        Technical spine, construction, examination
+      </p>
+    </header>
+
+    <!-- Role -->
+    <section class="mb-16">
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-900/30">
+        <h2 class="font-display text-2xl text-zinc-100 mb-4">Role</h2>
+        <p class="text-zinc-300 leading-relaxed">
+          Season 1 is the technical core. Students study existing detection systems, 
+          implement simplified versions, and face their first formal maieutic examination.
+        </p>
+      </div>
+    </section>
+
+    <!-- Details Grid -->
+    <section class="mb-16">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">DURATION</div>
+          <p class="text-zinc-300">14 weeks (February – May 2026)</p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">ENROLLMENT</div>
+          <p class="text-zinc-300">Application required, cohort-based</p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">ASSESSMENT</div>
+          <p class="text-zinc-300">Pass / Revise / Refuse</p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">CREDENTIAL</div>
+          <p class="text-zinc-300">Badge: Voight-Kampff Engineer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Spine -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-8">Technical Spine</h2>
+      
+      <div class="mb-8">
+        <h3 class="font-mono text-season-primary text-sm mb-4 tracking-widest">SYSTEMS STUDIED</h3>
+        <div class="space-y-3">
+          {technicalSpine.studied.map((system) => (
+            <div class="border border-zinc-800 rounded-lg p-4 bg-zinc-900/30 hover:border-season-primary/30 transition-colors">
+              <h4 class="text-zinc-100 mb-1">{system.name}</h4>
+              <p class="text-zinc-500 text-sm">{system.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-mono text-season-primary text-sm mb-4 tracking-widest">SYSTEMS IMPLEMENTED</h3>
+        <div class="space-y-3">
+          {technicalSpine.implemented.map((system) => (
+            <div class="border border-zinc-800 rounded-lg p-4 bg-zinc-900/30 hover:border-season-primary/30 transition-colors">
+              <div class="flex justify-between items-start">
+                <h4 class="text-zinc-100">{system.name}</h4>
+                <span class="font-mono text-xs text-zinc-500">{system.phase}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Programming Framework -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-6">Programming Framework</h2>
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-900/30">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <p class="font-mono text-season-primary text-sm mb-2">LANGUAGE</p>
+            <p class="text-zinc-300">Python (primary), JavaScript (secondary)</p>
+          </div>
+          <div>
+            <p class="font-mono text-season-primary text-sm mb-2">TOOLING</p>
+            <p class="text-zinc-300">GitHub Classroom for code submission & peer review</p>
+          </div>
+        </div>
+        <div class="mt-6 pt-6 border-t border-zinc-800">
+          <p class="text-zinc-400 italic">
+            All code is <strong class="text-zinc-300">inquiry-driven</strong>: implementations are 
+            vehicles for questions, not products.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Symposia -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-8">Symposia (6 + 1)</h2>
+      <div class="space-y-4">
+        {symposia.map((symposium) => (
+          <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30 hover:border-season-primary/30 transition-colors">
+            <div class="flex items-center gap-6">
+              <span class="font-mono text-3xl text-zinc-700 font-bold">{String(symposium.number).padStart(2, '0')}</span>
+              <div class="flex-1">
+                <h3 class="text-lg text-zinc-100">{symposium.title}</h3>
+              </div>
+              <div class="text-right">
+                <span class="font-mono text-xs text-zinc-500">HERETIC SEAT</span>
+                <p class="font-mono text-season-primary">{symposium.heretic}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="mt-6 text-zinc-500 text-sm">
+        The 7th symposium is unscheduled — a gathering when the cohort requires it.
+      </p>
+    </section>
+
+    <!-- Maieutic Examination -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-6">Maieutic Examination</h2>
+      <div class="border border-season-primary/30 rounded-lg p-8 bg-zinc-900/50">
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          At season's end, each student faces a one-on-one oral examination with a faculty agent.
+          This is not a test of knowledge, but a test of <em>thinking under inquiry</em>.
+        </p>
+        <div class="grid md:grid-cols-3 gap-4 mt-6">
+          <div class="text-center p-4 border border-zinc-800 rounded">
+            <p class="font-mono text-green-400 text-lg">Pass</p>
+            <p class="text-zinc-500 text-sm mt-1">Demonstrated reflection</p>
+          </div>
+          <div class="text-center p-4 border border-zinc-800 rounded">
+            <p class="font-mono text-amber-400 text-lg">Revise</p>
+            <p class="text-zinc-500 text-sm mt-1">Further development needed</p>
+          </div>
+          <div class="text-center p-4 border border-zinc-800 rounded">
+            <p class="font-mono text-zinc-400 text-lg">Refuse</p>
+            <p class="text-zinc-500 text-sm mt-1">Honorable withdrawal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="mb-16">
+      <div class="border border-season-primary rounded-lg p-8 bg-zinc-900/50 text-center">
+        <p class="font-mono text-season-primary text-sm tracking-widest mb-2">TUITION</p>
+        <p class="text-4xl font-display text-zinc-100 mb-2">$500</p>
+        <p class="text-zinc-400">Application opens January 2026</p>
+        <p class="text-zinc-500 text-sm mt-4">
+          Limited scholarships available. Prerequisite: Season 0 completion or equivalent.
+        </p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="border-t border-zinc-800 pt-8 flex justify-between items-center">
+      <a href="/course-mhh-electric-sheep" class="text-zinc-500 hover:text-season-primary transition-colors">
+        ← Season 0: Electric Sheep
+      </a>
+      <a href="/course-mhh-more-human-than-human" class="text-zinc-500 hover:text-season-primary transition-colors">
+        Season 2: More Human Than Human →
+      </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t border-zinc-800 text-center">
+      <p class="font-mono text-xs text-zinc-600">
+        More Human Than Human · Inquiry Institute
+      </p>
+    </footer>
+  </main>
+</BaseLayout>
