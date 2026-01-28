@@ -138,4 +138,4 @@ This is the foundation of the Voight-Kampff problem: the test measures the exami
 ---
 
 **Assignment Due:** End of Week 4
-**Next Module:** [03 - Empathy Measures](./03-empathy-measures.md)
+**Next Module:** [03 - CAPTCHA Systems](./03-captcha-systems.md)
